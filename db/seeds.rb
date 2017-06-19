@@ -24,7 +24,8 @@ end
             title:"Rails #portfolio_item",
             subtitle: "yo",
             body: "yo",
-            main_image: "http://via.placeholder.com/600x200/",
+            main_image: "htt
+            p://via.placeholder.com/600x200/",
             thumb_image:"http://via.placeholder.com/350x200/" )
             
         end

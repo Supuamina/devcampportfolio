@@ -58,11 +58,9 @@ class BlogsController < ApplicationController
   end
 
   def toggle_status
-    
-    redirect_to blogs_url
     if @blog.draft?
       @blog.published!
-    else if @blog.published?
+    elsif @blog.published?
       @blog.draft!
     end
         
@@ -79,5 +77,4 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body)
     end
-end
 end

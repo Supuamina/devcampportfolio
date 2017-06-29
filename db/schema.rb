@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170628172519) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blogs", force: :cascade do |t|
+  create_table "blogs", id: :serial, force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170628172519) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "portfolios", force: :cascade do |t|
+  create_table "portfolios", id: :serial, force: :cascade do |t|
     t.string "title"
     t.string "subtitle"
     t.text "body"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20170628172519) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "skills", force: :cascade do |t|
+  create_table "skills", id: :serial, force: :cascade do |t|
     t.string "title"
     t.integer "percent_utilized"
     t.datetime "created_at", null: false
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170628172519) do
     t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
 
-  create_table "topics", force: :cascade do |t|
+  create_table "topics", id: :serial, force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
